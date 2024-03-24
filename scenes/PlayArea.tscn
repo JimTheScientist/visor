@@ -1,0 +1,261 @@
+[gd_scene load_steps=16 format=3 uid="uid://dgdh2vpnbdi8p"]
+
+[ext_resource type="Script" path="res://scenes/PlayArea.cs" id="1_bu3ig"]
+[ext_resource type="Texture2D" uid="uid://cujctjmoaevc5" path="res://textures/general/stone_edge.png" id="1_y4v0x"]
+[ext_resource type="Texture2D" uid="uid://dwe2vj1eo1pqv" path="res://textures/general/stone.png" id="2_eaqd6"]
+[ext_resource type="Texture2D" uid="uid://btxg2r2j4weem" path="res://textures/general/stone_corner.png" id="3_ifiis"]
+[ext_resource type="Texture2D" uid="uid://chrh64abgaog8" path="res://textures/general/stone_corner_inv.png" id="4_albyy"]
+[ext_resource type="Texture2D" uid="uid://vkd6qdsso6mn" path="res://textures/general/guy2.png" id="4_df6q3"]
+[ext_resource type="Texture2D" uid="uid://byp0ojejebl7x" path="res://textures/general/guy.png" id="5_td265"]
+[ext_resource type="Script" path="res://scenes/Player2Body.cs" id="6_65aoq"]
+[ext_resource type="Script" path="res://scenes/Player2Camera.cs" id="6_i87o7"]
+[ext_resource type="Script" path="res://scenes/Player1Body.cs" id="6_w6778"]
+[ext_resource type="Script" path="res://scenes/Camera2D.cs" id="7_4tt52"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xaru5"]
+size = Vector2(384, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ah7a"]
+size = Vector2(63.9999, 64.0001)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8h3gw"]
+size = Vector2(53, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a0etl"]
+size = Vector2(212, 192)
+
+[node name="Node2D" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_bu3ig")
+
+[node name="FirstRoom" type="Node2D" parent="."]
+position = Vector2(64, 64)
+
+[node name="Floor" type="Node2D" parent="FirstRoom"]
+
+[node name="Stone" type="Sprite2D" parent="FirstRoom/Floor"]
+position = Vector2(96, 96)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_eaqd6")
+
+[node name="Stone2" type="Sprite2D" parent="FirstRoom/Floor"]
+position = Vector2(160, 96)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_eaqd6")
+
+[node name="Stone3" type="Sprite2D" parent="FirstRoom/Floor"]
+position = Vector2(96, 160)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_eaqd6")
+
+[node name="Stone4" type="Sprite2D" parent="FirstRoom/Floor"]
+position = Vector2(160, 160)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_eaqd6")
+
+[node name="Stone5" type="Sprite2D" parent="FirstRoom/Floor"]
+position = Vector2(96, 224)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_eaqd6")
+
+[node name="Stone6" type="Sprite2D" parent="FirstRoom/Floor"]
+position = Vector2(160, 224)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_eaqd6")
+
+[node name="Stone7" type="Sprite2D" parent="FirstRoom/Floor"]
+position = Vector2(224, 96)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_eaqd6")
+
+[node name="Stone8" type="Sprite2D" parent="FirstRoom/Floor"]
+position = Vector2(288, 96)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_eaqd6")
+
+[node name="Stone9" type="Sprite2D" parent="FirstRoom/Floor"]
+position = Vector2(224, 160)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_eaqd6")
+
+[node name="Stone10" type="Sprite2D" parent="FirstRoom/Floor"]
+position = Vector2(288, 160)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_eaqd6")
+
+[node name="Stone11" type="Sprite2D" parent="FirstRoom/Floor"]
+position = Vector2(224, 224)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_eaqd6")
+
+[node name="Stone12" type="Sprite2D" parent="FirstRoom/Floor"]
+position = Vector2(288, 224)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_eaqd6")
+
+[node name="Stone13" type="Sprite2D" parent="FirstRoom/Floor"]
+position = Vector2(352, 160)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_eaqd6")
+
+[node name="Wall" type="Node2D" parent="FirstRoom"]
+
+[node name="StoneCorner" type="Sprite2D" parent="FirstRoom/Wall"]
+position = Vector2(32, 31)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_ifiis")
+
+[node name="StoneEdge" type="Sprite2D" parent="FirstRoom/Wall"]
+position = Vector2(32, 96)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_y4v0x")
+
+[node name="StoneEdge2" type="Sprite2D" parent="FirstRoom/Wall"]
+position = Vector2(32, 160)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_y4v0x")
+
+[node name="StoneEdge3" type="Sprite2D" parent="FirstRoom/Wall"]
+position = Vector2(32, 224)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_y4v0x")
+
+[node name="StoneEdge4" type="Sprite2D" parent="FirstRoom/Wall"]
+position = Vector2(96, 288)
+rotation = -1.57079
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_y4v0x")
+
+[node name="StoneEdge5" type="Sprite2D" parent="FirstRoom/Wall"]
+position = Vector2(160, 288)
+rotation = -1.57079
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_y4v0x")
+
+[node name="StoneEdge6" type="Sprite2D" parent="FirstRoom/Wall"]
+position = Vector2(224, 288)
+rotation = -1.57079
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_y4v0x")
+
+[node name="StoneEdge7" type="Sprite2D" parent="FirstRoom/Wall"]
+position = Vector2(288, 288)
+rotation = -1.57079
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_y4v0x")
+
+[node name="StoneCorner2" type="Sprite2D" parent="FirstRoom/Wall"]
+position = Vector2(32, 288)
+rotation = -1.57079
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_ifiis")
+
+[node name="StoneCorner3" type="Sprite2D" parent="FirstRoom/Wall"]
+position = Vector2(352, 32)
+rotation = 1.57079
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_ifiis")
+
+[node name="StoneEdge11" type="Sprite2D" parent="FirstRoom/Wall"]
+position = Vector2(96.0002, 32.0002)
+rotation = 1.5708
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_y4v0x")
+
+[node name="StoneEdge12" type="Sprite2D" parent="FirstRoom/Wall"]
+position = Vector2(160, 32.0002)
+rotation = 1.5708
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_y4v0x")
+
+[node name="StoneEdge13" type="Sprite2D" parent="FirstRoom/Wall"]
+position = Vector2(224, 32.0002)
+rotation = 1.5708
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_y4v0x")
+
+[node name="StoneEdge14" type="Sprite2D" parent="FirstRoom/Wall"]
+position = Vector2(288, 32.0002)
+rotation = 1.5708
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_y4v0x")
+
+[node name="StoneCorner4" type="Sprite2D" parent="FirstRoom/Wall"]
+position = Vector2(352, 288)
+rotation = 3.14159
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_ifiis")
+
+[node name="StoneCornerInv" type="Sprite2D" parent="FirstRoom/Wall"]
+position = Vector2(352.005, 224.005)
+rotation = -1.57079
+scale = Vector2(0.249963, 0.249963)
+texture = ExtResource("4_albyy")
+
+[node name="StoneCornerInv2" type="Sprite2D" parent="FirstRoom/Wall"]
+position = Vector2(351.977, 96.0078)
+rotation = -3.14159
+scale = Vector2(0.249814, 0.249936)
+texture = ExtResource("4_albyy")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="FirstRoom/Wall"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FirstRoom/Wall/StaticBody2D"]
+position = Vector2(192, 32)
+shape = SubResource("RectangleShape2D_xaru5")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="FirstRoom/Wall/StaticBody2D"]
+position = Vector2(192, 288)
+shape = SubResource("RectangleShape2D_xaru5")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="FirstRoom/Wall/StaticBody2D"]
+position = Vector2(32, 191)
+rotation = -1.57079
+shape = SubResource("RectangleShape2D_xaru5")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="FirstRoom/Wall/StaticBody2D"]
+position = Vector2(352, 224)
+rotation = -1.57079
+shape = SubResource("RectangleShape2D_6ah7a")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="FirstRoom/Wall/StaticBody2D"]
+position = Vector2(352, 96)
+rotation = -1.57079
+shape = SubResource("RectangleShape2D_6ah7a")
+
+[node name="Player2Body" type="CharacterBody2D" parent="."]
+position = Vector2(161, 286)
+script = ExtResource("6_65aoq")
+
+[node name="Player2" type="Node2D" parent="Player2Body"]
+
+[node name="Guy2" type="Sprite2D" parent="Player2Body/Player2"]
+position = Vector2(6.4373e-06, 7.51019e-06)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("4_df6q3")
+
+[node name="Player2Camera" type="Camera2D" parent="Player2Body/Player2"]
+enabled = false
+zoom = Vector2(2.96, 2.96)
+script = ExtResource("6_i87o7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player2Body"]
+position = Vector2(2.5, 0)
+shape = SubResource("RectangleShape2D_8h3gw")
+
+[node name="Player1Body" type="CharacterBody2D" parent="."]
+position = Vector2(161, 158)
+scale = Vector2(0.25, 0.25)
+script = ExtResource("6_w6778")
+
+[node name="Camera2D" type="Camera2D" parent="Player1Body"]
+enabled = false
+zoom = Vector2(2.96, 2.96)
+script = ExtResource("7_4tt52")
+
+[node name="Guy" type="Sprite2D" parent="Player1Body"]
+texture = ExtResource("5_td265")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player1Body"]
+position = Vector2(10, 0)
+shape = SubResource("RectangleShape2D_a0etl")

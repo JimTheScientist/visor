@@ -1,0 +1,68 @@
+[gd_scene load_steps=7 format=3 uid="uid://cekxculnoj3iq"]
+
+[ext_resource type="Texture2D" uid="uid://coryx71r7tdss" path="res://textures/menu/drawing.svg" id="1_qd21f"]
+[ext_resource type="Script" path="res://scenes/Button.cs" id="2_ghsg8"]
+[ext_resource type="AudioStream" uid="uid://bbtfkxkhh2ast" path="res://music/mainmenu_sound.wav" id="3_r4rb6"]
+[ext_resource type="Script" path="res://scenes/Button2.cs" id="3_sehsr"]
+[ext_resource type="Script" path="res://scenes/AudioStreamPlayer.cs" id="4_er4so"]
+
+[sub_resource type="SystemFont" id="SystemFont_n4ppx"]
+subpixel_positioning = 0
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Drawing" type="Sprite2D" parent="."]
+position = Vector2(345, 316)
+scale = Vector2(0.259386, 0.291667)
+texture = ExtResource("1_qd21f")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 641.0
+offset_top = 168.0
+offset_right = 894.0
+offset_bottom = 267.0
+script = ExtResource("2_ghsg8")
+
+[node name="HostText" type="RichTextLabel" parent="Button"]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 6.0
+offset_right = 225.0
+offset_bottom = 100.0
+mouse_filter = 1
+theme_override_fonts/mono_font = SubResource("SystemFont_n4ppx")
+theme_override_font_sizes/normal_font_size = 60
+text = "Host"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 646.0
+offset_top = 381.0
+offset_right = 901.0
+offset_bottom = 485.0
+script = ExtResource("3_sehsr")
+
+[node name="JoinText" type="RichTextLabel" parent="Button2"]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 8.0
+offset_right = 234.0
+offset_bottom = 102.0
+mouse_filter = 1
+theme_override_fonts/mono_font = SubResource("SystemFont_n4ppx")
+theme_override_font_sizes/normal_font_size = 60
+text = "Join"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_r4rb6")
+autoplay = true
+script = ExtResource("4_er4so")
