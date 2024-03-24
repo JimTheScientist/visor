@@ -3,7 +3,7 @@
 I have decided to learn Godot, as it seems to be a good replacement for other engines that are proprietary.
 
 The game I am writing here is a puzzle game, it is a 2 player peer to peer game.
-[Software Demo Video](https://www.youtube.com/watch?v=gmYwlqpFrpE)
+[Software Demo Video](https://youtu.be/CaQpdN2I0MU)
 
 # Development Environment
 
